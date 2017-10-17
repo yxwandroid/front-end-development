@@ -5,3 +5,14 @@
 	height: 200px;
 	background:#606
 	}
+
+/*类选择器*/
+.myclass{
+	color: dodgerblue;
+}
+
+/*标签选择器*/
+h1{
+	color: chartreuse;
+	font-size: 22px;
+}
