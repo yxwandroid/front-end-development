@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列布局</title>
+    <style type="text/css">
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .left {
+            width: 200px;
+            height: 500px;
+            background: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .middle {
+            height: 500px;
+            background: rosybrown;
+            margin: 0 310px 0 210px;
+        }
+
+        .right {
+
+            width: 300px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: yellow;
+
+        }
+    </style>
+</head>
+<body>
+<div class="left">200</div>
+<div class="middle">
+    这里就设置了DIV标签CSS属性相当于初始化了DIV标签CSS属性，这里设置margin外边距为0；边框border属性为0和内补白也为0；这样相当于就初始化了DIV之间距各属性距离为0，这样就不会造成DIV直接有一定的距离
+</div>
+<div class="right">300</div>
+</body>
+</html>
