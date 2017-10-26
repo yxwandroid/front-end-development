@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+<div id="example">
+
+</div>
+<!--<img src='http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg'>-->
+<script type="text/babel">
+    var HelloMessage = React.createClass({
+        render: function () {
+//            return <h1>Hello {this.props.name}</h1>;
+            return <img src={this.props.name}>;
+        }
+    });
+
+
+    ReactDOM.render(
+            <HelloMessage name='http://localhost:63342/react/reactDemo2.html?_ijt=1s44f0vf2nm3ijjl86m1ovvn2v'/>,
+        document.getElementById('example')
+    )
+    ;
+</script>
+</body>
+</html>
