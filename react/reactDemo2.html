@@ -5,24 +5,32 @@
     <script src="build/browser.min.js"></script>
 </head>
 <body>
+<!--八、this.state-->
 <div id="example">
-
 </div>
-<!--<img src='http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg'>-->
 <script type="text/babel">
-    var HelloMessage = React.createClass({
+    var LikeButton = React.createClass({
+        getInitialState: function () {
+            return {liked: false};
+        },
+        handleClick: function (event) {
+            this.setState({liked: !this.state.liked});
+        },
         render: function () {
-//            return <h1>Hello {this.props.name}</h1>;
-            return <img src={this.props.name}>;
+            var text = this.state.liked ? 'like' : 'haven\'t liked';
+            return (
+                    <p onClick={this.handleClick}>
+                        You {text} this. Click to toggle.
+                    </p>
+            );
         }
     });
 
-
     ReactDOM.render(
-            <HelloMessage name='http://localhost:63342/react/reactDemo2.html?_ijt=1s44f0vf2nm3ijjl86m1ovvn2v'/>,
+            <LikeButton/>,
         document.getElementById('example')
-    )
-    ;
+    );
+
 </script>
 </body>
 </html>
